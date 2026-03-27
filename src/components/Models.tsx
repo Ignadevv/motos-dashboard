@@ -34,8 +34,8 @@ export default function Models() {
     e.preventDefault();
     if (!selectedMoto) return;
     
-    const numeroWhatsApp = "51920426213";
-    const mensaje = `¡Hola! Mi nombre es ${customerName}. Estoy muy interesado(a) en separar el modelo *${selectedMoto.name}*. Por favor bríndeme los medios de pago para realizar la separación oportuna.`;
+    const numeroWhatsApp = "51904321786";
+    const mensaje = `¡Hola! Mi nombre es ${customerName}. Estoy muy interesado(a) en separar el modelo *${selectedMoto.name}* en GDN Motors. Por favor bríndeme los medios de pago para realizar la separación oportuna.`;
     
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
@@ -64,7 +64,7 @@ export default function Models() {
         </div>
 
         {loading ? (
-           <div className="flex justify-center my-12"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div></div>
+           <div className="flex justify-center my-12"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]"></div></div>
         ) : models.length === 0 ? (
            <div className="text-center text-gray-600 font-bold bg-white/90 p-8 rounded-lg shadow-sm border border-gray-200">
              No hay modelos disponibles por el momento.
@@ -98,7 +98,7 @@ export default function Models() {
                   </div>
                   <button 
                     onClick={() => handleOpenDetails(model)}
-                    className="bg-orange-600 hover:bg-orange-700 text-white font-black text-sm px-6 py-3 transition-colors tracking-widest w-full uppercase shadow-sm mt-auto"
+                    className="bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-black text-sm px-6 py-3 transition-colors tracking-widest w-full uppercase shadow-sm mt-auto border-t border-[#60a5fa]/20"
                   >
                     VER DETALLES
                   </button>
@@ -162,7 +162,7 @@ export default function Models() {
 
                   <button 
                     onClick={() => setShowForm(true)}
-                    className="w-full bg-gray-900 hover:bg-black text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-wide text-sm"
+                    className="w-full bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-wide text-sm border border-[#60a5fa]/30"
                   >
                     <Calendar className="w-5 h-5" />
                     Separar Modelo

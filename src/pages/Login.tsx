@@ -35,11 +35,11 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="flex justify-center text-orange-500">
+        <div className="flex justify-center text-[#1e3a5f]">
           <Bike className="w-16 h-16" />
         </div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Acceso al Panel
+          Acceso al Panel — GDN Motors
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Ingresa tus credenciales de administrador para continuar
@@ -68,7 +68,7 @@ export default function Login() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 font-medium"
+                  className="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#1e3a5f] focus:border-[#1e3a5f] font-medium"
                   placeholder="admin@tumarca.com"
                 />
               </div>
@@ -87,7 +87,7 @@ export default function Login() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 font-medium"
+                  className="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#1e3a5f] focus:border-[#1e3a5f] font-medium"
                   placeholder="••••••••"
                 />
               </div>
@@ -97,7 +97,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-black text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 transition-colors uppercase tracking-wide"
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-black text-white bg-[#1e3a5f] hover:bg-[#162d4a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e3a5f] disabled:opacity-50 transition-colors uppercase tracking-wide"
               >
                 {loading ? 'Iniciando sesión...' : (
                   <span className="flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function Login() {
             </div>
             
             <div className="text-center pt-4">
-               <a href="/" className="text-sm font-medium text-gray-500 hover:text-orange-500">
+               <a href="/" className="text-sm font-medium text-gray-500 hover:text-[#1e3a5f]">
                  &larr; Volver a la página principal
                </a>
             </div>

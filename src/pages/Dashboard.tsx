@@ -163,16 +163,16 @@ export default function Dashboard() {
     }
   };
 
-  if (adminLoading) return <div className="min-h-screen flex justify-center items-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div></div>;
+  if (adminLoading) return <div className="min-h-screen flex justify-center items-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a5f]"></div></div>;
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans pb-12">
       <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Bike className="w-8 h-8 text-orange-500" />
-            <h1 className="text-2xl font-black text-gray-900 tracking-tight">PANEL ADMIN</h1>
-            <span className="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
+            <Bike className="w-8 h-8 text-[#1e3a5f]" />
+            <h1 className="text-2xl font-black text-gray-900 tracking-tight">PANEL ADMIN — GDN Motors</h1>
+            <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
               Rol: {role}
             </span>
           </div>
@@ -196,13 +196,13 @@ export default function Dashboard() {
           <div className="flex border-b border-gray-200 mb-8">
             <button
               onClick={() => setActiveTab('motos')}
-              className={`py-3 px-6 font-bold text-sm transition-colors border-b-2 ${activeTab === 'motos' ? 'border-orange-500 text-orange-500' : 'border-transparent text-gray-500 hover:text-gray-800'}`}
+              className={`py-3 px-6 font-bold text-sm transition-colors border-b-2 ${activeTab === 'motos' ? 'border-[#1e3a5f] text-[#1e3a5f]' : 'border-transparent text-gray-500 hover:text-gray-800'}`}
             >
               <span className="flex items-center gap-2"><Bike className="w-4 h-4"/> Gestión de Motos</span>
             </button>
             <button
               onClick={() => setActiveTab('users')}
-              className={`py-3 px-6 font-bold text-sm transition-colors border-b-2 ${activeTab === 'users' ? 'border-orange-500 text-orange-500' : 'border-transparent text-gray-500 hover:text-gray-800'}`}
+              className={`py-3 px-6 font-bold text-sm transition-colors border-b-2 ${activeTab === 'users' ? 'border-[#1e3a5f] text-[#1e3a5f]' : 'border-transparent text-gray-500 hover:text-gray-800'}`}
             >
                <span className="flex items-center gap-2"><Users className="w-4 h-4"/> Personal y Accesos</span>
             </button>
@@ -214,7 +214,7 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 lg:col-span-1 h-fit">
               <h2 className="text-xl font-extrabold mb-6 flex items-center gap-2 text-gray-800 border-b pb-4">
-                <Plus className="w-6 h-6 text-orange-500" />
+                <Plus className="w-6 h-6 text-[#1e3a5f]" />
                 Agregar Nuevo Modelo
               </h2>
               
@@ -313,7 +313,7 @@ export default function Dashboard() {
                 <button 
                   type="submit"
                   disabled={savingMoto}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-4 rounded transition-colors mt-8 shadow-md disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-black py-4 px-4 rounded transition-colors mt-8 shadow-md disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   {savingMoto ? 'Subiendo a la nube...' : <><Plus className="w-5 h-5"/> PUBLICAR MODELO</>}
                 </button>
@@ -326,13 +326,13 @@ export default function Dashboard() {
                   <Bike className="w-6 h-6 text-gray-500" />
                   Base de Datos Activa
                 </span>
-                <span className="bg-orange-100 text-orange-800 py-1 px-3 rounded-full text-sm">
+                <span className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm">
                   Total Registros
                 </span>
               </h2>
 
               {motosLoading ? (
-                 <div className="flex justify-center py-12"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>
+                 <div className="flex justify-center py-12"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#1e3a5f]"></div></div>
               ) : motos.length === 0 ? (
                 <div className="text-center py-16 text-gray-500 border-2 border-dashed border-gray-200 rounded-xl bg-gray-50">
                   <p className="font-bold text-lg text-gray-600">No hay modelos registrados aún.</p>
@@ -371,7 +371,7 @@ export default function Dashboard() {
                 Registrar Nuevo Empleado
               </h2>
               
-              <div className="mb-6 text-sm text-gray-600 bg-orange-50 border border-orange-200 p-4 rounded-md">
+              <div className="mb-6 text-sm text-gray-600 bg-blue-50 border border-blue-200 p-4 rounded-md">
                  <strong>Nota del flujo de Firebase Frontend:</strong> Registrar una nueva cuenta cerrará automáticamente tu sesión actual de Admin. Una vez creada la cuenta del empleado, tendrás que volver a loguearte con tu correo de Admin.
               </div>
 
